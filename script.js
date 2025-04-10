@@ -1,17 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Configure AWS
-    AWS.config.region = 'YOUR_REGION'; // e.g., 'us-east-1'
+    AWS.config.region = 'us-west-2'; // e.g., 'us-east-1'
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-        IdentityPoolId: 'YOUR_IDENTITY_POOL_ID'
+        IdentityPoolId: 'us-west-2:32214b34-6ff4-4b62-b71c-cb98f2644830'
     });
-
-    // Initialize API Gateway
-    const apiGateway = new AWS.ApiGatewayManagementApi({
-        endpoint: 'YOUR_API_ENDPOINT'
-    });
-
-    // Initialize DynamoDB
-    const dynamoDB = new AWS.DynamoDB.DocumentClient();
     
     let currentConversationId = Date.now().toString();
     
