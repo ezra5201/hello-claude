@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             messagesContainer.appendChild(loadingElement);
             
             // Call API Gateway
-            const response = await fetch('YOUR_API_ENDPOINT', {
+            const response = await fetch('https://unhvtre908.execute-api.us-west-2.amazonaws.com/test/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
